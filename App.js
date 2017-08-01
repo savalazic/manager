@@ -6,6 +6,8 @@ import firebase from 'firebase';
 
 import reducers from './reducers';
 
+import LoginForm from './components/LoginForm';
+
 export default class App extends Component {
   
   componentWillMount() {
@@ -25,19 +27,10 @@ export default class App extends Component {
   render() {
     return (
       <Provider store={createStore(reducers)}>
-        <View style={styles.container}>
-          <Text>WELCOME</Text>
+        <View style={{ flex: 1 }}>
+          <LoginForm />
         </View>
       </Provider>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
