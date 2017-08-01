@@ -6,5 +6,8 @@
     "ecmaFeatures": {
       "jsx": true
     }
+  },
+  "rules": {
+    "arrow-body-style": 0
   }
 }
